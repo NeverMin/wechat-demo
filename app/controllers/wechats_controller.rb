@@ -2,6 +2,8 @@ class WechatsController < ActionController::Base
   wechat_responder
 
   # default text responder when no other match
+  Rails.logger.debug wechat_responder.inspect
+
   on :text do |request, content|
     request.reply.text "echo: #{content}" # Just echo
   end
@@ -126,5 +128,8 @@ class WechatsController < ActionController::Base
   end
 
   # If no match above will fallback to below
-  on :fallback, respond: 'fallback message'
+  on :fallback do |request|
+    request.reply.success
+  end
+
 end
