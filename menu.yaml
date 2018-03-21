@@ -1,0 +1,13 @@
+button:
+ -
+  type: "view"
+  name: "功能"
+  url:  "https://zammad.com.cn/tour/"
+ -
+  type: "view"
+  name: "价格"
+  url:  "https://zammad.com.cn/pricing/zammad/"
+ -
+  type: "view"
+  name: "手册"
+  url:  "https://doc.zammad.com.cn/index.html"
