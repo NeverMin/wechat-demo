@@ -5,6 +5,9 @@ class WechatsController < ActionController::Base
   Rails.logger.debug wechat_responder.inspect
 
   on :text do |request, content|
+    Rails.logger.debug params.inspect
+    Rails.logger.debug request.inspect
+    Rails.logger.debug content.inspect
     request.reply.text "echo: #{content}" # Just echo
   end
 
